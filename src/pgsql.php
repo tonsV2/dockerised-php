@@ -5,7 +5,7 @@ $user = $_SERVER['POSTGRES_USER'];
 $password = $_SERVER['POSTGRES_PASSWORD'];
 
 $connection_string = "host=db port=5432 dbname=$dbname user=$user password=$password";
-$query = "select * from pg_stat_activity";
+$query = "select * from something";
 
 $conn = pg_connect($connection_string);
 $result = pg_query($conn, $query);
