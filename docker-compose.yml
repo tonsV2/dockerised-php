@@ -21,6 +21,8 @@ services:
 
   db:
     image: postgres:12-alpine
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
